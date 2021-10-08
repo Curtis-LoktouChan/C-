@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+/*VS2019专用*/
 # include<stdio.h>
 int product (int,int);
 int main(void)
