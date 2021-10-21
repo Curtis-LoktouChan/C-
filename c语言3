@@ -15,3 +15,22 @@ int product(int a, int b)
 	mul = a * b;
 	return mul;
 }
+
+
+//C语言任务一：20乘以10 
+#include<stdio.h>
+int main()
+{ 
+     int x,y,p;
+	 x=10,y=20;
+     p=product(x,y) ;
+
+     printf("The product is :%d",p) ;
+ }
+    
+	  int product(int a ,int b ) 
+     {
+	 int c;
+     c=a*b ;
+     return c; 
+} 
