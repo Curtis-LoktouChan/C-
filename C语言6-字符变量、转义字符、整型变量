@@ -1,0 +1,11 @@
+# include<stdio.h>
+int main()
+{
+char c;
+c='B';
+putchar(c);//向显示器输入第一个B 
+putchar('\x42');//\xhh，、x开头，hh是十六进制数 
+putchar(0x42);//0x开头：十六进制的整型变量 
+return 0;
+
+}
