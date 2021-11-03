@@ -1,0 +1,13 @@
+#include <stdio.h>  
+int main()
+/*输入半径，计算⚪表面积和体积*/  
+{ 
+ double r,s,v;
+ int pi=3.14;
+ printf("input r:",r);          /*输入球的半径*/
+ scanf("%lf",&r); 
+ s=4*pi*r*r;              /*计算球体的表面积*/ 
+ v=4.0*pi*r*r*r/3.0;       /*计算球体的体积*/ 
+ printf("r=%lf",r); 
+ printf("s=%lf,v=%lf",s,v); 
+}
