@@ -8,3 +8,31 @@ max=x>y?x:y;//运用条件计算符
 printf("the max=%d\n",max); //指定输出max 
 return 0;
 }
+
+# include<stdio.h>
+/*从键盘输入两个整数，输出其中最大者*/
+int main()
+{
+int x,y,max;
+scanf("%d %d",&x,&y);//空格作为语句结束 
+max=x;//运用if单分支语句
+if(y>x) 
+   {
+   	max=y;
+   }
+printf("the max=%d\n",max); //指定输出max 
+return 0;
+}
+
+
+# include<stdio.h>
+/*从键盘输入两个整数，输出其中最大者*/
+int main()
+{
+int x,y,max;
+scanf("%d %d",&x,&y);//空格作为语句结束 
+if(y>x)  	max=y;//运用if-else双分支语句 
+   else max=x;
+printf("the max=%d\n",max); //指定输出max 
+return 0;
+}
