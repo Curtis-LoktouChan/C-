@@ -41,7 +41,53 @@ else
 printf("%d不是闰年\n",x);
 return 0;
 }
-	
+
+
+# include<stdio.h>
+/*任务4：编写程序，找出5个整数中的最大数和最小数
+并输出找到的最大数和最小数。*/
+int main()
+{
+int a,b,c,d,e,x; 
+printf("请输入5个整数：");
+scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+if(a>b){x=a;
+a=b;
+b=x;}
+ if(a>c) {
+      x = a;
+        a = c;
+        c = x;
+    }
+    if(a>d){
+        x = d;
+        a = d;
+        d=a;
+    }
+if(a>e){x=a;
+a=e;
+e=x;
+}
+if(e<d){x=e;
+e=d;
+d=x;
+}
+if(e<c){x=e;
+e=c;
+c=x;
+}
+if(e<b){x=e;
+e=b;
+b=e;
+}
+if(e<a){x=e;
+e=a;
+a=x;
+}
+printf("最大数为：%d\n最小数为：%d",e,a);
+return 0;
+}
+
 
 # include<stdio.h>
 /*任务5:某商场节假日举行打折促销活动，给与顾客购物的折扣率如下： 
