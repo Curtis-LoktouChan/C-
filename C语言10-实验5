@@ -1,3 +1,17 @@
+/*任务1:求出1~100之和，1~100中偶数之和、1~100中的奇数之和。*/
+#include<stdio.h> 
+int main()
+{int i,sum,sum1;
+for(i=0;i<=100;i++)
+{
+sum+=i;}//也可以表示为sum=sum+i。 
+printf("1~100和为：%d\n",--sum);
+sum1=sum/2;
+printf("1~100中偶数之和:%d\n",sum1);
+printf("1~100中奇数之和:%d\n",sum1);
+return 0;}
+
+
 /*任务5:输出所有的"水仙花数"
 指一个3位数,其各位数字立方和等于该数本身。*/
 #include <stdio.h>
