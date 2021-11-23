@@ -11,6 +11,27 @@ printf("1~100中偶数之和:%d\n",sum1);
 printf("1~100中奇数之和:%d\n",sum1);
 return 0;}
 
+/*任务2：) 输入一行字符
+分别统计出其中英文字母、空格、数字和其他字符的个数*/
+#include<stdio.h>
+int main()
+{
+char x;
+int a=0,b=0,c=0,d=0;
+printf("请输入一行字符：\n");
+while((x=getchar())!='\n')//不要输入enter键的时候。 
+{
+if((x>='a'&&c<='z')||(x>='A'&&c<='Z'))//如果c是字母. 
+a++;
+else if(x>='0'&&c<='9')//c是数字的时候。 
+b++;
+else if(x==' ')//c是空格的时候 
+c++;
+else
+d++;}
+printf("字母=%d,数字=%d,空格=%d,其他=%d\n",a,b,c,d);
+return 0;}
+
 //任务3：求Fibonacci数列前40项
 #include "stdio.h"
 int main(){
