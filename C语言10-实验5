@@ -46,6 +46,26 @@ if(i % 2 == 0)//一行四个排列,美观。
 			printf("\n");}
  return 0;}
 
+   #include <stdio.h>
+#include <math.h>
+/*任务4：求PI值*/
+int main() {
+	int  y = -1, i;
+	double x = 0, z, m, k;
+	m = pow(10, -7);
+	for (i = 1;; i++, i++) 
+	{
+		y *= -1;//负号变换 
+		k = pow(i, -1);//每一项的绝对值 
+		x +=  k * y;//每一项相加 
+		if (k < m)
+		 {
+			printf("%.10f\n", 4 * x);
+			break;	
+		}
+	}
+	return 0;}
+
 /*任务5:输出所有的"水仙花数"
 指一个3位数,其各位数字立方和等于该数本身。*/
 #include <stdio.h>
@@ -62,6 +82,7 @@ int main()
             printf("%d  ", n);}
     printf("是水仙花数\n");
    return 0;} 
+   
    
    #include<stdio.h>
 /*任务6：输入一个正整数，求它的所有素数因子。*/
