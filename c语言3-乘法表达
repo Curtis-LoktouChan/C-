@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 /*VS2019专用*/
 # include<stdio.h>
-int product (int,int);
+int product (int,int);//函数定义写后面，要先声明。记得加分号。
 int main(void)
 {int x,y,s;
 scanf("%d%d",&x,&y);
@@ -9,7 +9,8 @@ s=product(x,y);
 printf("The mul is:%d",s);
 return 0;
 }
-int product(int a, int b)/*调用product*/
+int product(int a, int b)/*定义product，
+函数返回值类型（int）&函数名&形式参数表（参数类型&变量名...)*/
 {
 	int mul;
 	mul = a * b;
@@ -36,7 +37,7 @@ int main()
 } 
 
 # include<stdio.h>
-int product (int,int);
+int product (int,int);//函数声明记得加分号
 int main(void)
 {int x,y,s;
 scanf("%d%d",&x,&y);
