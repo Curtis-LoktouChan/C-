@@ -1,0 +1,22 @@
+# include<stdio.h>
+int main()
+{printf("hello, World!");
+return 0;}
+
+/*C语言任务一*/
+#include <stdio.h> 
+int  main( ) 
+{printf ("This is my first program!");  
+    return 0; } 
+
+#include<stdio.h>
+int main()
+{
+	printf("Hello, World\n");
+printf("Hello,World\n");
+printf("Hello,World\nHello World\n");
+
+return 0;
+}
+
+
