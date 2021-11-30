@@ -12,7 +12,7 @@ int main()
  printf("s=%lf,v=%lf",s,v); 
 }
 
-任务四
+
 #include <stdio.h>  
 int  main()
  /*输入摄氏温度，输出它对应的华氏温度*/
@@ -24,4 +24,3 @@ int  main()
 printf("华氏温度为：%.2lf\n",f); 
 return 0;
 }
-
