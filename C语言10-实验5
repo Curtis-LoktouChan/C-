@@ -118,7 +118,7 @@ printf("数列前20项和为%lf",sum);
 /*任务8：从键盘上输入两个整数，求它们的最大公约数。*/
 int main()
 { int m, n, temp, i;
-    printf("Input m & n:");
+    printf("请输入两个整数:");
     scanf("%d %d", &m, &n);
     if(m<n)  /*比较大小，使得m中存储大数，n中存储小数*/
     { 
