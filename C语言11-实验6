@@ -1,0 +1,16 @@
+/*第一小题正确答案：*/
+#include<stdio.h>
+int sum(int,int);//声明函数 
+int main()
+{
+int x,y,f;
+scanf("%d %d",&x,&y);
+f=sum(x,y);//调用函数 
+printf("%d\n",f);
+return 0;
+}
+int sum(int a,int b)//定义函数 
+{int c;
+c=a+b;
+return(c);}
+
