@@ -1,4 +1,4 @@
-/*第一小题正确答案：*/
+/*任务1：第一小题正确答案：*/
 #include<stdio.h>
 int sum(int,int);//声明函数 
 int main()
@@ -14,7 +14,7 @@ int sum(int a,int b)//定义函数
 c=a+b;
 return(c);}
 
-/*输入下面程序，分析运行结果：8、17*/
+/*任务2：输入下面程序，分析运行结果：8、17*/
 #include<stdio.h>
 int func (int ,int);//声明函数
 int main ( )
@@ -28,3 +28,8 @@ int func (int a,int b)//定义函数
     i+=m+1;
     m=i+a+b;
     return (m);}
+
+/*任务3：输入一无符号整数，求所有数位上数字之和*/
+#include<stdio.h>
+
+int main ( )
