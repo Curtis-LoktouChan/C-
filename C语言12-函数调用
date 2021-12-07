@@ -17,3 +17,20 @@ else
 result=n*fx(n-1); 
 return result; 
 }
+
+/*全局变量的使用*/ 
+#include<stdio.h>
+void sub();//声明使用无返回值的函数sub 
+int a=3,b=4;//全局变量a，b 
+int main()
+{ printf("全局变量a=%d，b=%d\n",a,b);
+sub();
+int a=1,b=2; /*在局部变量的使用范围内，全局变量和局部变量同名时
+全局变量被暂时隐藏，局部变量有效*/ 
+printf("main函数的局部变量a=%d，b=%d",a,b);
+return 0;
+ }
+ void sub()//void类型函数不用末尾加return 
+ {int a=6,b=7;
+ printf("sub函数的局部变量a=%d，b=%d\n",a,b);
+ }
