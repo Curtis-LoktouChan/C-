@@ -1,7 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 /*VS2019专用*/
 # include<stdio.h>
-int product (int,int);//函数定义写后面，要先声明。记得加分号。
+int product (int,int);/*函数定义写main后面，要先声明。声明就是函数定义加分号
+声明不用写形参类型&形参符号（int a），（因为a只有在函数声明这一语句中有效）只用写形参类型（int），记得加分号。*/
 int main(void)
 {int x,y,s;
 scanf("%d%d",&x,&y);
