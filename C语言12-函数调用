@@ -1,0 +1,19 @@
+/*利用递归调用函数求某数的阶乘*/ 
+#include<stdio.h>
+unsigned int fx(unsigned int);//声明使用函数fx。 
+int main()
+{unsigned int n,result;//局部变量result、n只在Main函数内使用 
+printf("请输入整数："); 
+ scanf("%u",&n);//格式字符u：按十进制无符号整数输出 
+ result=fx(n);//调用fx函数 
+ printf("%u的阶乘是%u\n",n,result);
+  return 0;
+  }
+unsigned int fx(unsigned int n)//局部变量n只在函数定义内使用 
+{unsigned int result;//局部变量result只在函数定义内使用 
+if(n==0||n==1)
+{result=1;}
+else
+result=n*fx(n-1); 
+return result; 
+}
