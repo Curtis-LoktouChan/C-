@@ -32,7 +32,7 @@ int func (int a,int b)//定义函数
     本题中main函数的k m值未变，定义函数func中i、m值变化了*/
 
 
-/*任务3：输入一无符号整数，求所有数位上数字之和*/
+/*任务3.1：输入一无符号整数，求所有数位上数字之和*/
 #include<stdio.h>
 int main ( )
 {unsigned int x,result=0;
