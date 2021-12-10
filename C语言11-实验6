@@ -27,9 +27,19 @@ int func (int a,int b)//定义函数
 {   static int m=0,i=2;
     i+=m+1;
     m=i+a+b;
-    return (m);}
+    return (m);}/*分析：调用一次函数之后，i=2+0+1，m=3+4+1=8；
+    第二次调用函数，此时i=3+8+1=12，m=12+4+1=17，所以输出结果17。
+    本题中main函数的k m值未变，定义函数func中i、m值变化了*/
+
 
 /*任务3：输入一无符号整数，求所有数位上数字之和*/
 #include<stdio.h>
-
 int main ( )
+{unsigned int x,result=0;
+scanf("%u",&x);
+while(x)
+{result+=x%10;//个位+十位+百位这样加下去。 
+x/=10;
+}
+printf("%u\n",result);
+return 0;}
