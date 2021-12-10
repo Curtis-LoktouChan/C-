@@ -43,3 +43,26 @@ x/=10;
 }
 printf("%u\n",result);
 return 0;}
+
+
+#include <>stdio.h>
+/*任务3.2使用递归函数，把任意一个正整数颠倒过来输出。*/
+void f(int n)//定义函数写开头 
+{
+    if(n)
+	{
+        printf("%d",n%10);
+        f(n/10);
+	}//递归调用 }
+	int main()
+{
+    int x;
+    printf("请输入任意正整数：\n");
+    scanf("%d",&x);
+    if(x<1)
+	{
+        printf("数据错误!\n");
+    }
+    f(x);//调用函数 
+    printf("\n");
+    return 0;}
