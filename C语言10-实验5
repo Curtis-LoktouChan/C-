@@ -113,7 +113,15 @@ else
 k++;
 printf("%4d\n",m);
 return 0;}
-
+/*求素数因子另一种思想*/
+#include
+int main(){int m,i,j;
+printf("请输入一个正整数")
+scanf("%d",&m);
+for(i=2;i＜m;i++)
+{
+if(m%i)==0{}
+}
 
 /*任务7求下列分数数列前20项之和*/
 #include <stdio.h>
