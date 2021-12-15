@@ -68,6 +68,47 @@ void f(int n)//定义函数写开头
     return 0;}
 
 
+
+#include <stdio.h>/*任务3.3判断绝对素数
+如果一个正整数是素数，它的反位数也是素数，称这样的数为绝对素数。
+在主函数中输入一个整数，输出是否为绝对素数的信息。*/ 
+#include<math.h>
+ int sushu(unsigned int);//声明判断素数的函数 
+ unsigned int rev(unsigned int);//声明求返位函数 
+int main()
+{unsigned int n,m;
+scanf("%u",&n);
+if(sushu(n)!=0)
+ {m=rev(n);}
+else
+   {printf("%u不是素数！",n);
+   return 0;}
+if(sushu(m)!=0)
+  {printf("%u是绝对素数",n);}
+  else
+    {printf("%u是素数，但不是绝对素数",n);}
+    return 0;
+}
+unsigned int rev(unsigned int y)
+{
+	unsigned int z=0;
+	while(y!=0)
+	{
+		z=z*10+y%10;//求个位数 
+		y=y/10;//缩小十倍 
+	}
+	return z;
+}
+int sushu(unsigned int n) 
+{int i;
+	for(i=2;i<n;i++)
+	{
+		if(n%i==0){return 0;}
+		if(i==n){return 1;}
+	}}
+
+
+
 #include <stdio.h>/*3.4输入4个整数
 找出其中最大的数。
 用函数的嵌套调用来处理。*/
