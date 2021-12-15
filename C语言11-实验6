@@ -66,3 +66,19 @@ void f(int n)//定义函数写开头
     f(x);//调用函数 
     printf("\n");
     return 0;}
+
+
+#include <stdio.h>/*3.4输入4个整数
+找出其中最大的数。
+用函数的嵌套调用来处理。*/
+int max(int,int);//声明函数 
+int main()
+{int a,b,c,d;
+printf("输入4个整数");
+scanf("%d %d %d %d",&a,&b,&c,&d);
+printf("最大数是%d\n",max(max(max(a,b),c),d));
+}//嵌套调用
+int max(int x,int y)//定义函数 
+{  
+return x>y?x:y; 
+}
