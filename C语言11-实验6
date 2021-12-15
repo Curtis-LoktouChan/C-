@@ -82,3 +82,41 @@ int max(int x,int y)//定义函数
 {  
 return x>y?x:y; 
 }
+
+
+/*3.6求一元二次方程ax2 + bx + c = 0的根，
+用3个函数分别求判别式大于0、等于0和小于0时的根，并输出结果。
+主函数输入系数a，b，c*/
+#include<stdio.h>
+#include<math.h> 
+void f1();//无解时
+double f2(int a,int b,int c);//只有一个解时
+double f3(int a,int b,int c);//两个解时
+int main()
+{
+	int a,b,c,d;
+	scanf("%d %d %d",&a,&b,&c);
+	d=b*b-4*a*c;
+if(d<0){f1(a,b,c);}
+if(d==0){f2(a,b,c);}
+if(d>0){f3(a,b,c);}
+ return 0;
+}
+void f1()
+{printf("方程无解！");}
+double f2(int a,int b,int c) //只有一个解时
+{
+	double x;
+	x=-b/(2*a);
+	printf("方程有一个解\nx1= x2= %.2f",x);//保留小数点后两位 
+	return x;
+}
+double f3(int a,int b,int c) //两个解时
+{
+	double x1,x2,d;
+	d=b*b-4*a*c;
+	x1=(-b+sqrt(d))/(2*a);
+	x2=(-b-sqrt(d))/(2*a);
+	printf("方程有两个不同解\nx1=%.2f , x2=%.2f",x1,x2);//保留小数点后两位 
+	return x1;
+	return x2;}
