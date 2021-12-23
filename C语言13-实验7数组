@@ -1,0 +1,24 @@
+/*4) 用冒泡法对10个整数进行排序。*/
+#include<stdio.h>
+void main()
+{
+int a[10];
+int i,j,t;//t是中间变量 
+printf("输入10个整数 :\n");
+for (i=0;i<10;i++)
+scanf("%d",&a[i]);//输入到数组中 
+printf("\n");
+for(j=0;j<9;j++)//比较轮数j 
+{
+	for(i=0;i<9;i++)//比较次数i 
+     if(a[i]>a[i+1])/*引用中间变量完成
+替换*/{
+        t=a[i];
+        a[i]=a[i+1];
+        a[i+1]=t;
+       }
+}
+printf("数字从小到大为:\n");
+for(i=0;i<10;i++)
+printf("%d ",a[i]);//按a[0]到a[9]输出 
+return 0;}
