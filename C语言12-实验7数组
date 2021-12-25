@@ -22,3 +22,23 @@ printf("数字从小到大为:\n");
 for(i=0;i<10;i++)
 printf("%d ",a[i]);//按a[0]到a[9]输出 
 return 0;}
+
+
+/*6）编写函数实现在数组中查找指定的元素
+并返回元素所在的位置*/
+int search(int a[],int t,int n)
+{//三个参数：要找的数组，查找目标，数组长度 
+	int i=0,found=0,p;
+	while(!found&&i<n)
+	{
+		if(a[i]==t)
+		   found=1;
+		else
+		   ++i;
+	} 
+if(found)
+  p=i+1;//找到就显示在这个数组第几个 
+else
+  p=-1;//如果找不到就返回数值-1 
+return p;
+}
