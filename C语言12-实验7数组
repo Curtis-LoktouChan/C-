@@ -24,6 +24,38 @@ printf("%d ",a[i]);//按a[0]到a[9]输出
 return 0;}
 
 
+/*5) 已知数组a中有10个互不相等的元素，数组b中有 5个互不相等的元素
+而数组c中包含那些在a中但不在b中的元素，编程产生数组c */
+#include <stdio.h> 
+#define N 10
+#define M 5
+int main()
+{
+ int i,j,k=0; 
+ int a[N],b[M],c[N];
+ printf("请输入10个互不相等的数作为a数组\n");
+ printf("请输入5个互不相等的数作为b数组\n");
+for(i=0;i<N;i++)
+    scanf("%d",&a[i]);
+for(i=0;i<M;i++)
+    scanf("%d",&b[i]);
+    
+for(i=0;i<N;i++)
+  {
+ for(j=0;j<M;j++)//a的第一个元素与所有b中元素对比 
+    {if(a[i]==b[j])  break; }
+ if(j>=M)
+ {
+   c[k]=a[i];
+   k++;
+ }}
+for(i=0;i<k;i++)
+   printf("%5d",c[i]);
+return 0; 
+}
+
+
+
 /*6）编写函数实现在数组中查找指定的元素
 并返回元素所在的位置*/
 int search(int a[],int t,int n)
