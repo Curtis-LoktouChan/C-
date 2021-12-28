@@ -1,4 +1,23 @@
-/*4) 用冒泡法对10个整数进行排序。*/
+/*3返回一个3×5 的二维数组各元素的地址
+并由此说明二维数组中各元素是按什么顺序存储的*/
+#include<stdio.h>
+int main()
+{
+	int a[3][5],i,j; 
+	int *p;//定义指针变量 
+	for(i=0;i<3;i++)
+	{
+	printf("\n");
+	for(j=0;j<5;j++)
+	{	p=&a[i][j];//指针取地址 
+	    printf("%d ",p);}
+    }
+return 0;}
+
+
+
+
+/*4 用冒泡法对10个整数进行排序。*/
 #include<stdio.h>
 void main()
 {
@@ -24,7 +43,7 @@ printf("%d ",a[i]);//按a[0]到a[9]输出
 return 0;}
 
 
-/*5) 已知数组a中有10个互不相等的元素，数组b中有 5个互不相等的元素
+/*5已知数组a中有10个互不相等的元素，数组b中有 5个互不相等的元素
 而数组c中包含那些在a中但不在b中的元素，编程产生数组c */
 #include <stdio.h> 
 #define N 10
@@ -56,7 +75,7 @@ return 0;
 
 
 
-/*6）编写函数实现在数组中查找指定的元素
+/*6编写函数实现在数组中查找指定的元素
 并返回元素所在的位置*/
 int search(int a[],int t,int n)
 {//三个参数：要找的数组，查找目标，数组长度 
@@ -73,4 +92,60 @@ if(found)
 else
   p=-1;//如果找不到就返回数值-1 
 return p;
+}
+
+
+/*7有一个4*5的矩阵
+编程求出其中值最小的那个元素的值，以及其所在的行号和列号*/
+#include <stdio.h> 
+int main(){
+int a[4][5],i,j,k;
+for(i=0;i<4;i++)
+  {for(j=0;j<5;j++)
+   {scanf("%d",&a[i][j]);}}//输入数组a
+k=a[0][0];
+for(i=0;i<4;i++)
+{
+	for(j=0;j<5;j++)
+    {if(k>a[i][j])
+       {k=a[i][j];}//让k是最小的 
+    }
+}
+for(i=0;i<4;i++)
+{
+	for(j=0;j<4;j++)
+	{if (k == a[i][j]){
+printf("最小的数是：%d，在第%d行\n第%d列",k,i+1,j+1);}
+    }
+} 
+return 0;}
+
+
+/*8编写函数实现两个矩阵的加和乘运算以及矩阵的转置运算*/
+void add(int a[M][N],int b[M][N],intc[M][N])
+{/*矩阵的加法*/
+	int i,j;
+	for(i=0,i<M;i++)
+	{
+		for(j=0,j<N,j++)
+		  c[i][j]=a[i][j]+b[i][j];
+	}}
+
+
+void mul(int a[M][N],int b[N][M],int r[M][M]) 
+{/*矩阵的乘法*/
+	int i,j,k=0;
+	for(i=0;i<M;i++)
+	  for(k=0;k<M;k++)
+	    for(j=0;j<N,j++)
+	      r[i][k]+=a[i][j]*b[j][i];	   
+}
+
+
+	void trans(int a[M][N],int b[N][M]) 
+{/*矩阵的转置运算*/
+	int i,j;
+	for(i=0;i<M;i++)
+	    for(j=0;j<N,j++)
+	      b[j][i]=a[i][j];	   
 }
